@@ -33,8 +33,8 @@
   (make-sparse-keymap))
 
 (defun evil-workman-mode--swap-evil-keys (a b)
-  (let* ((x (lookup-key evil-motion-state-map a))
-         (y (lookup-key evil-motion-state-map b)))
+  (let ((x (lookup-key evil-motion-state-map a))
+        (y (lookup-key evil-motion-state-map b)))
     (eval `(progn
              (evil-define-key 'normal evil-workman-mode-map (kbd ,a) #',y)
              (evil-define-key 'normal evil-workman-mode-map (kbd ,b) #',x)))))
