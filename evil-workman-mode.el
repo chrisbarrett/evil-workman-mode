@@ -4,6 +4,7 @@
 
 ;; Author: Chris Barrett <chris.d.barrett@me.com>
 ;; Version: 0.1
+;; Package-Requires: ((evil "1.2.11"))
 
 ;; This file is not part of GNU Emacs.
 
