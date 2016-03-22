@@ -53,7 +53,6 @@
   (evil-workman-mode--swap-evil-motion-keys "J" "N")
   (evil-workman-mode--swap-evil-motion-keys "k" "e")
   (evil-workman-mode--swap-evil-motion-keys "K" "E")
-  (evil-workman-mode--swap-evil-motion-keys "K" "E")
   (evil-workman-mode--swap-evil-motion-keys "h" "y")
   (evil-workman-mode--swap-evil-motion-keys "H" "Y")
   (if evil-workman-mode
