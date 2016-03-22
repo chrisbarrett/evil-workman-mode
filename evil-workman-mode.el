@@ -23,7 +23,7 @@
 
 ;;; Commentary:
 
-;; Workman layout for evil-mode. Enable by calling `evil-workman-mode'.
+;; Workman layout for evil-mode. Enable by calling `evil-workman-global-mode'.
 
 ;;; Code:
 
