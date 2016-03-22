@@ -60,6 +60,13 @@
       (evil-define-key 'normal evil-workman-mode-map "E" nil)
     (evil-define-key 'normal evil-workman-mode-map "E" #'evil-forward-WORD-end)))
 
+;;;###autoload
+(defun turn-on-evil-workman-mode (&rest _)
+  (evil-workman-mode +1))
+
+;;;###autoload
+(define-globalized-minor-mode evil-workman-global-mode evil-workman-mode turn-on-evil-workman-mode)
+
 (provide 'evil-workman-mode)
 
 ;;; evil-workman-mode.el ends here
