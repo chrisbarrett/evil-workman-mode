@@ -37,12 +37,9 @@
                (lookup-key evil-normal-state-map a)))
         (y (or (lookup-key evil-motion-state-map b)
                (lookup-key evil-normal-state-map b))))
-    (eval `(progn
-             (evil-define-key 'normal evil-workman-mode-map (kbd ,a) #',y)
-             (evil-define-key 'normal evil-workman-mode-map (kbd ,b) #',x)
-
-             (evil-define-key 'visual evil-workman-mode-map (kbd ,a) #',y)
-             (evil-define-key 'visual evil-workman-mode-map (kbd ,b) #',x)))
+    (eval `(dolist (state '(normal motion visual))
+             (evil-define-key state evil-workman-mode-map (kbd ,a) #',y)
+             (evil-define-key state evil-workman-mode-map (kbd ,b) #',x)))
     (cons x y)))
 
 ;;;###autoload
