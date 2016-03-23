@@ -32,7 +32,7 @@
 (defvar evil-workman-mode-map
   (make-sparse-keymap))
 
-(defun evil-workman-mode--swap-evil-motion-keys (a b)
+(defun evil-workman-mode--swap-evil-keys (a b)
   (let ((x (or (lookup-key evil-motion-state-map a)
                (lookup-key evil-normal-state-map a)))
         (y (or (lookup-key evil-motion-state-map b)
@@ -47,17 +47,14 @@
   "Enable keybindings that are more ergonomic for workman."
   :keymap evil-workman-mode-map
   :lighter " Workman"
-  (evil-workman-mode--swap-evil-motion-keys "o" "l")
-  (evil-workman-mode--swap-evil-motion-keys "O" "L")
-  (evil-workman-mode--swap-evil-motion-keys "j" "n")
-  (evil-workman-mode--swap-evil-motion-keys "J" "N")
-  (evil-workman-mode--swap-evil-motion-keys "k" "e")
-  (evil-workman-mode--swap-evil-motion-keys "K" "E")
-  (evil-workman-mode--swap-evil-motion-keys "h" "y")
-  (evil-workman-mode--swap-evil-motion-keys "H" "Y")
-  (if evil-workman-mode
-      (evil-define-key 'normal evil-workman-mode-map "E" nil)
-    (evil-define-key 'normal evil-workman-mode-map "E" #'evil-forward-WORD-end)))
+  (evil-workman-mode--swap-evil-keys "o" "l")
+  (evil-workman-mode--swap-evil-keys "O" "L")
+  (evil-workman-mode--swap-evil-keys "j" "n")
+  (evil-workman-mode--swap-evil-keys "J" "N")
+  (evil-workman-mode--swap-evil-keys "k" "e")
+  (evil-workman-mode--swap-evil-keys "K" "E")
+  (evil-workman-mode--swap-evil-keys "h" "y")
+  (evil-workman-mode--swap-evil-keys "H" "Y"))
 
 ;;;###autoload
 (defun turn-on-evil-workman-mode (&rest _)
