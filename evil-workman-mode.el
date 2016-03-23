@@ -39,7 +39,10 @@
                (lookup-key evil-normal-state-map b))))
     (eval `(progn
              (evil-define-key 'normal evil-workman-mode-map (kbd ,a) #',y)
-             (evil-define-key 'normal evil-workman-mode-map (kbd ,b) #',x)))
+             (evil-define-key 'normal evil-workman-mode-map (kbd ,b) #',x)
+
+             (evil-define-key 'visual evil-workman-mode-map (kbd ,a) #',y)
+             (evil-define-key 'visual evil-workman-mode-map (kbd ,b) #',x)))
     (cons x y)))
 
 ;;;###autoload
